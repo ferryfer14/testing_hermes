@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\login\LoginController;
+use App\Http\Controllers\product\ProductController;
 use App\Http\Controllers\transaction\CheckoutController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,3 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::post('login', [LoginController::class, 'submit']);
 Route::post('transaction', [CheckoutController::class, 'submit']);
+Route::get('detail', [ProductController::class, 'detail']);

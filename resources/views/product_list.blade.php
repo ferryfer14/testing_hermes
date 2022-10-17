@@ -59,7 +59,7 @@
                                                 </p>
                                             </div>
                                             <div class="col-md-3">
-                                                <button data-id="{{ $p->id }}"
+                                                <button id="{{ $p->id }}"
                                                     class="form-control btn-primary buy">BUY</button>
                                             </div>
                                         </div>
@@ -77,6 +77,7 @@
             </div>
         </div>
     </div>
+    @include('modal.detail_product');
     @include('layout.js');
     {{ Html::script('js/product.js') }}
 </body>
