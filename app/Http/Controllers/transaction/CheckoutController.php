@@ -18,7 +18,7 @@ class CheckoutController extends Controller
     }
     private function readLastId()
     {
-        $transaction_header = TransactionHeaderModel::latest();
+        $transaction_header = TransactionHeaderModel::orderBy('id','DESC');
         $last_id = 0;
         if ($transaction_header->count() > 0) {
             $last_id = $transaction_header->first()['id'];
