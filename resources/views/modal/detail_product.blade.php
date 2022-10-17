@@ -23,7 +23,7 @@
                                     Dimension : <span class="text-dark" id="dimensi"></span><br/>
                                     Price Unit : <span class="text-dark" id="unit"></span>
                                 </p>
-                                <button class="form-control btn-primary buy">BUY</button>
+                                <button class="form-control btn-primary">BUY</button>
                             </div>
                         </div>
                     </div>

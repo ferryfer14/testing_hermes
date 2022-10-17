@@ -6,8 +6,9 @@ $(document).ready(function () {
     const productPopp = document.querySelectorAll('.buy');
     productPopp.forEach(function (button) {
         button.onclick = function (e) {
-            e.preventDefault();
+            e.preventDefault(); 
             var id = button.id;
+            $('#harga_sebelum_discount').html('');
             $.ajax({
                 url: APP_URL + "/api/detail?id=" + id,
                 type: "get",
@@ -18,7 +19,6 @@ $(document).ready(function () {
                 async: false,
             }).done(function (data) {
                 if (data.status == 'success') {
-                    console.log(data.detail['product_name']);
                     $('#product_name').html(data.detail['product_name']);
                     if (data.detail['discount'] != '0') {
                         $('#harga_sebelum_discount').html(formatRupiah(data.detail['price'], 0));
